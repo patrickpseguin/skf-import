@@ -24,6 +24,6 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/Angular/Docker/Dockerfile'
+        dockerfile: '$(Build.SourcesDirectory)/Docker/alpine/Dockerfile'
         tags: |
           $(tag)
