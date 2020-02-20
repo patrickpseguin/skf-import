@@ -25,9 +25,9 @@ steps:
   displayName: 'Install dependencies'
 
 - script:
+    cd skf-import/
     export FLASK_APP=skf/app.py
     export PYTHONPATH=.:$PYTHONPATH
-    export FLASK_DEBUG=1
-    cd skf
-    python app.py
+    export FLASK_DEBUG=1    
+    python skf/app.py
   displayName: 'Export the app'
