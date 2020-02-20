@@ -24,7 +24,9 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-- script: |
-    pip install pytest pytest-azurepipelines
-    pytest
-  displayName: 'pytest'
+- script:
+    export FLASK_APP=skf/app.py
+    export PYTHONPATH=.:$PYTHONPATH
+    export FLASK_DEBUG=1
+    python3.6 skf/app.py
+  displayName: 'Export the app'
