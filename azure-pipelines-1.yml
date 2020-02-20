@@ -27,11 +27,7 @@ steps:
 - script:    
     export FLASK_APP=skf/app.py
     export PYTHONPATH=.:$PYTHONPATH
-    export FLASK_DEBUG=1     
+    export FLASK_DEBUG=1
+    $env:FLASK_APP = "skf/app.py"
+    python -m flask run
   displayName: 'Export the app'
-
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: 'skf/app.py'
-  displayName: 'run the python app'
