@@ -24,8 +24,7 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-- script:
-    cd skf-import/
+- script:    
     export FLASK_APP=skf/app.py
     export PYTHONPATH=.:$PYTHONPATH
     export FLASK_DEBUG=1     
