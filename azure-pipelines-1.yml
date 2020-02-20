@@ -28,5 +28,6 @@ steps:
     export FLASK_APP=skf/app.py
     export PYTHONPATH=.:$PYTHONPATH
     export FLASK_DEBUG=1
-    python ./skf/app.py
+    cd skf
+    python app.py
   displayName: 'Export the app'
